@@ -167,5 +167,5 @@ class automation:
 if __name__ == '__main__':
     devops_command = 'jenkins'
     task_name = 'Build images'
-    instance1 = automation(devops_command)
-    instance1.main()
+    runner = automation(devops_command)
+    runner.main()
