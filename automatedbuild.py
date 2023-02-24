@@ -8,6 +8,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from getpass import getpass
+import winproxy
+import pandas as pd
+import numpy as np
 
 
 class automation:
@@ -22,7 +25,7 @@ class automation:
             'build images': self.jenkinslogin,
             "git clone": self.githublogin
         }
-        self.chromepath = r'C:\Program Files\Google\Chrome\Application'
+        self.chromepath = r'C:\ExamplePath\Chrome\Application'
         self.chromerui = 'https://chromedriver.storage.googleapis.com/index.html'
         self.browser = webdriver.Chrome()
         
@@ -60,7 +63,8 @@ class automation:
             loop_inital += 1
 
     def jenkinslogin(self):
-        vpn_result = os.popen('tasklist | findstr "openvpn"')
+        # Edit your vpn's name
+        vpn_result = os.popen('tasklist | findstr "examplevpn"')
         con_vpn = vpn_result.readlines()
         vpn_result.close()
         
