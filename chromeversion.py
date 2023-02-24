@@ -26,5 +26,5 @@ def checkchrome_version(chromepath):
 
 
 if __name__ == '__main__':
-    chromepath = r'C:\Program Files\Google\Chrome\Application'
+    chromepath = input("Plz input the chrome.exe's path")
     checkchrome_version(chromepath)
