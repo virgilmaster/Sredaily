@@ -26,7 +26,7 @@ class automation:
             "git clone": self.githublogin
         }
         self.chromepath = r'C:\ExamplePath\Chrome\Application'
-        self.chromerui = 'https://chromedriver.storage.googleapis.com/index.html'
+        self.chromeuri = 'https://chromedriver.storage.googleapis.com/index.html'
         self.browser = webdriver.Chrome()
         
     def main(self):
@@ -41,12 +41,16 @@ class automation:
         
     
     def checkchrome(self):
+        #from powerfulspiders import crawler
+        # method = crawler(self.chromeuri)
         webdriver_version = webdriver.__version__
         print('webdriver version is: ',webdriver_version)
         os.chdir(self.chromepath)
         dir_result = os.listdir()
         dir_loop = len(dir_result)
         loop_inital = 0
+        # spider's result = list[].append(webpage.param)
+        # not static 
         chrome_version_list = ['2','70','72','73','74','75','76','77','78','79','80','81','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112','113']
     
         while loop_inital < dir_loop:
